@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Vérification de l'email - ApTe</title>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    body { display: flex; align-items: center; justify-content: center; min-height: 100vh; background: var(--gray-100); }
+    .verification-container { background: #fff; border-radius: 16px; box-shadow: var(--shadow-lg); padding: 2rem 3rem; text-align: center; max-width: 420px; }
+    .success, .error { display: block; font-size: 1.5rem; font-weight: bold; margin-bottom: 1.2rem; padding: 0.7rem 0; border-radius: 8px; }
+    .success { color: #10B981; background: #e6f9f1; border: 1px solid #10B981; }
+    .error { color: #EF4444; background: #fff0f0; border: 1px solid #EF4444; }
+    .btn-main { margin-top: 2rem; font-size: 1.1rem; padding: 0.8rem 2.2rem; border-radius: 8px; font-weight: 700; background: linear-gradient(90deg, #4F46E5 0%, #38bdf8 100%); color: #fff; border: none; box-shadow: 0 2px 8px rgba(79,70,229,0.08); transition: background 0.2s; display: inline-block; }
+    .btn-main:hover { background: linear-gradient(90deg, #38bdf8 0%, #4F46E5 100%); }
+    .logo-pro { font-size: 2rem; font-weight: bold; color: var(--primary); margin-bottom: 1.5rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem; }
+    .logo-pro .emoji { font-size: 2.2rem; }
+    #message-block p { margin: 0 0 1.2rem 0; font-size: 1.1rem; color: #444; }
+    .secondary-link { margin-top: 1.2rem; display: block; color: #4F46E5; text-decoration: underline; font-size: 1rem; }
+  </style>
+</head>
+<body>
+  <div class="verification-container">
+    <div class="logo-pro"><span class="emoji">⚡</span> <span>ApTe</span></div>
+    <div id="message-block">
+      <!-- Message de succès ou d'erreur injecté côté serveur -->
+    </div>
+    <button type="button" class="btn btn-main" onclick="window.location.href='/'">Aller à la connexion</button>
+  </div>
+</body>
+</html> 

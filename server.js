@@ -1,12 +1,14 @@
 // Charger dotenv en premier
-const dotenv = require('dotenv');
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+}
 const path = require('path');
 const url = require('url');
 
 // Charger le fichier .env à partir du répertoire courant
 const envPath = path.resolve(__dirname, '.env');
 
-const result = dotenv.config({ path: envPath });
+const result = require('dotenv').config({ path: envPath });
 if (result.error) {
     console.error('Erreur lors du chargement du fichier .env:', result.error);
     process.exit(1);
